@@ -1,0 +1,252 @@
+/* 26435292 Alexandra Nicolau */
+:root {
+    --blue: #0073E6;
+    --green: #C4E538;
+    --orange: #FF6B00;
+    --gray: #292929;
+}
+
+body {
+    background-color: black;
+    font-family: "Poppins", sans-serif;
+    text-align: left;
+    color: white;
+    margin: 0;
+}
+
+h1 {
+    color: white;
+    font-weight: normal;
+    font-size: 48px;
+    padding-top: 0;
+    text-align: left;
+    margin-left: 20px;
+
+}
+
+h2 {
+    color: white;
+    font-size: 36px;
+    font-weight: normal;
+    margin-left: 20px;
+
+    
+}
+
+h3 {
+    font-size: 28px;
+    color: white;
+    font-weight: normal;
+    margin-left: 40px;
+}
+
+.h2-n{
+    color: white;
+    font-size: 36px;
+    font-weight: normal;
+    margin-left: 20px;
+    border-left: 3px solid var(--blue);
+    padding-left: 10px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--blue);
+}
+
+
+.table-one {
+   font-size: 20px;
+    width: 100%;
+    margin-left: 20px;
+    border-collapse: collapse;
+    border-radius: 10px;
+    border-bottom: 2px solid var(--orange);
+    text-align: left;
+}
+
+.table-nav {
+    font-size: 20px;
+    width: auto;
+    text-align: center;
+    border-collapse: collapse;
+    margin: 20px auto;
+
+}
+
+.table-nav td {
+    padding: 0 40px;
+}
+
+.table-two {
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    width: 100%;
+    height: 500px;
+    border-collapse: collapse;
+    background-image: url('https://images.unsplash.com/photo-1644426358812-879f02d1d867?q=80&w=1228&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D');
+    
+
+}
+
+.h2-t{
+    color: white;
+}
+
+.img-one {
+    padding-left: 25px;
+}
+
+.progress-container {
+    max-width: 80%;
+    height: 30px;
+    background-color: #f8ffda;
+    color: white;
+    border-radius: 20px;
+    text-align: left;
+}
+
+.progress-bar {
+    width: 0%;
+    height: 30px;
+    border-radius: 20px;
+    text-align: left;
+    line-height: 30px;
+    color: black;
+    transition: width 0.5s;
+    background-color: var(--green);
+    max-width: 100%;
+}
+
+
+input {
+    background-color: black;
+    color: white;
+    width: 30px;
+    height: 28px;
+    padding: 2px 6px;
+    box-sizing: border-box;
+    font-size: 15px;
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    border: none;
+}
+
+
+input[type="number"] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+#carbInput {
+  width: 70px;
+}
+
+#proteinResult {
+    display: block;
+    margin-left: 12px;
+}
+
+#fibreResult {
+    display: block;
+    margin-left: 12px;
+}
+
+#carbResult {
+    display: block;
+    margin-left: 12px;
+}
+
+#fatsResult {
+    display: block;
+    margin-left: 12px;
+}
+
+.div-1 {
+    margin-left: 30px;
+}
+
+
+.chart-container {
+    width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: none;
+    border-radius: 15px;
+    text-align: center;
+    color: white;
+}
+
+canvas {
+    max-width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+    color: white;
+}
+
+.inputs {
+    display: grid;
+    grid-template-columns: max-content 80px max-content 80px;
+    justify-content: center;
+    align-items: center;
+    column-gap: 100px;
+    row-gap: 20px;
+    border: 2px solid var(--green);
+    border-radius: 10px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.inputs button {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: 100%;
+    background-color: var(--orange);
+    color: white;
+    border: 2px solid #FF6B00;
+    border-radius: 10px;
+}
+
+.inputs input {
+    width: 80px;
+    height: 36px;
+    font-size: 16px;
+}
+
+.input-unit {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.fitness button {
+    background-color: #C4E538;
+    color: black;
+    border: 2px solid #C4E538;
+    border-radius: 1px;
+}
+
+#stepsInput {
+    width: 100px;
+}
+
+#work {
+    width: 100%;
+}
+ 
+#t {
+    text-align: center;
+}

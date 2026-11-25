@@ -6,8 +6,20 @@
   <title>Membership Plans</title>
   <!-- Connects this HTML page to style.css file -->
  <link rel="stylesheet" href="subscription.css">
+  
 </head>
+  
 <body>
+  
+  <nav style="background: #111; padding: 15px 30px; display: flex; gap: 25px; border-bottom: 2px solid #ff6600;">
+    <a href="index.html" style="color: white; text-decoration: none; font-weight: bold;">Home</a>
+    <a href="nutrition.html" style="color: white; text-decoration: none; font-weight: bold;">Nutrition</a>
+    <a href="workout.html" style="color: white; text-decoration: none; font-weight: bold;">Workouts</a>
+    <a href="progress.html" style="color: white; text-decoration: none; font-weight: bold;">Progress</a>
+    <a href="subscription.html" style="color: white; text-decoration: none; font-weight: bold;">Subscription</a>
+  </nav>
+
+  
   <!-- Top Page Title & Subtitle -->
   <header>
     <h1>Membership Available Now</h1>
@@ -25,13 +37,16 @@
           <h3>Basic.</h3>
           <span class="pill-tag">WEEKLY</span>
         </div>
+        
         <div class="divider"></div>
         <div class="price">Free</div>
+        
         <ul>
           <li>Five recipes</li>
           <li>Five workouts</li>
           <li>Nutrition information</li>
         </ul>
+        
         <button class="btn-outline" onclick="selectPlan('Weekly - Basic (Free)')">Get Started</button>
       </div>
 
@@ -51,6 +66,7 @@
           <li>10% off personal trainers</li>
         </ul>
         <button class="btn-solid" onclick="selectPlan('Monthly - Standard (€24.99)')">Get Started</button>
+        
       </div>
 
       <!-- Annually - Premium -->
@@ -59,14 +75,17 @@
           <h3>Premium.</h3>
           <span class="pill-tag">ANNUALLY</span>
         </div>
+        
         <div class="divider"></div>
         <div class="price"><span>€</span>49<span>.99</span></div>
+        
         <ul>
           <li>25+ recipes + new drops monthly</li>
           <li>Unlimited workouts</li>
           <li>Weekly meal planner</li>
           <li>1 free check-in at gym</li>
         </ul>
+        
         <button class="btn-outline" onclick="selectPlan('Annually - Premium (€49.99)')">Get Started</button>
       </div>
 

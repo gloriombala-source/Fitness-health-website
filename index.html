@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>Fitness Tracker</title>
+
+    
+
+    <link rel="stylesheet" href="style.css">
+
+    
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        
+
+        <div class="card">
+
+           
+
+            <div class="step active" id="step1">
+
+                <h2>What is your full name?</h2>
+
+                
+
+                <input type="text" id="fullName" placeholder="First and Last Name">
+
+                <button onclick="nextStep(1,2)">Next</button>
+
+               
+
+            </div>
+
+            <div class="step" id="step2">
+
+                <h2>Choose a username</h2>
+
+                
+
+                <input type="text" id="username" placeholder="Username">
+
+                <button onclick="nextStep(2,3)">Next</button>
+
+            </div>
+
+            <div class="step" id="step3">
+
+                <h2>Enter your email</h2>
+
+               
+
+                <input type="email" id="email" placeholder="Email Address">
+
+                <button onclick="nextStep(3,4)">Next</button>
+
+            </div>
+
+            <div class="step" id="step4">
+
+                <h2>Create a password</h2>
+
+              
+
+                <input type="password" id="password" placeholder="Password">
+
+                <button onclick="nextStep(4,5)">Next</button>
+
+            </div>
+
+            <div class="step" id="step5">
+
+                <h2>Select your gender</h2>
+
+                
+
+                <select id="gender">
+
+                    <option>Male</option>
+
+                    <option>Female</option>
+
+                    <option>Other</option>
+
+                </select>
+
+                <button onclick="nextStep(5,6)">Next</button>
+
+            </div>
+
+            <div class="step" id="step6">
+
+                <h2>How old are you?</h2>
+
+              
+
+                <input type="number" id="age" placeholder="Age">
+
+                <button onclick="nextStep(6,7)">Next</button>
+
+            </div>
+
+            <div class="step" id="step7">
+
+                <h2>What is your height?</h2>
+
+               
+
+                <input type="number" id="height" placeholder="Height (cm)">
+
+                <button onclick="nextStep(7,8)">Next</button>
+
+            </div>
+
+            <div class="step" id="step8">
+
+                <h2>What is your weight?</h2>
+
+             
+
+                <input type="number" id="weight" placeholder="Weight (kg)">
+
+                <button onclick="nextStep(8,9)">Next</button>
+
+            </div>
+
+            <div class="step" id="step9">
+
+                <h2>What is your main goal?</h2>
+
+               
+
+                <select id="goal">
+
+                    <option>Lose Weight</option>
+
+                    <option>Gain Muscle</option>
+
+                    <option>Stay Fit</option>
+
+                    <option>Improve Health</option>
+
+                    <option>Build Endurance</option>
+
+                </select>
+
+                <button onclick="nextStep(9,10)">Next</button>
+
+            </div>
+
+            <div class="step" id="step10">
+
+                <h2>How active are you?</h2>
+
+               
+
+                <select id="activity">
+
+                    <option>Not Active</option>
+
+                    <option>Lightly Active</option>
+
+                    <option>Moderately Active</option>
+
+                    <option>Very Active</option>
+
+                    <option>Athlete</option>
+
+                </select>
+
+                <button onclick="saveUserData()">Finish</button>
+
+                
+
+            </div>
+
+            <div class="step" id="step11">
+
+                <h2>Account Created!</h2>
+
+               
+
+                <p>Welcome to your fitness journey.</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+   
+
+</body>
+
+</html>

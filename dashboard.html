@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>FitTrack Dashboard</title>
+    <!-- Dashboard page title -->
+
+    <link rel="stylesheet" href="style.css">
+    <!-- Connects dashboard to CSS file -->
+
+</head>
+
+<body>
+
+    <nav>
+
+        <h1>FitTrack</h1>
+        <!-- Website logo -->
+
+        <div class="nav-links">
+
+            <a href="dashboard.html">Home</a>
+            <!-- Link to dashboard homepage -->
+
+            <a href="workouts.html">Workouts</a>
+            <!-- Link to workouts page -->
+
+            <a href="nutrition.html">Nutrition</a>
+            <!-- Link to nutrition page -->
+
+            <a href="tracker.html">Progress Tracker</a>
+            <!-- Link to progress tracker page -->
+
+            <div class="dropdown">
+                <!-- Dropdown menu -->
+
+                <button class="dropbtn">
+                    More ▼
+                </button>
+
+                <div class="dropdown-content">
+
+                    <a href="about.html">About Us</a>
+                    <!-- Link to about page -->
+
+                    <a href="subscriptions.html">Subscriptions</a>
+                    <!-- Link to subscriptions page -->
+
+                    <a href="contact.html">Contact</a>
+                    <!-- Link to contact page -->
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <a href="Landing.html" class="signup-btn">
+            Log Out
+        </a>
+        <!-- Logs user out and returns to landing page -->
+
+    </nav>
+
+    <div style="padding:50px; color:white;">
+        <!-- Main dashboard content -->
+
+        <div class="dashboard-hero">
+            <!-- Dashboard welcome section -->
+
+            <div class="dashboard-text">
+
+                <h1 id="welcomeMessage">
+                    Welcome Back!
+                </h1>
+                <!-- Personalized welcome message -->
+
+                <p>
+                    Stay focused on your fitness journey
+                    and keep building healthy habits every day.
+                </p>
+                <!-- Motivational dashboard text -->
+
+            </div>
+
+            <div class="dashboard-image">
+
+                <img src="360_F_302201067_2ytoUoIjmQTAiU1FPXSGQLGsVKeRJebB.jpg" alt="Fitness">
+
+            </div>
+            <!-- Dashboard fitness image -->
+
+        </div>
+
+        <h2>
+            Your Fitness Profile
+        </h2>
+        <!-- Section heading for profile information -->
+
+        <div class="profile-cards">
+
+            <div class="profile-card">
+
+                <h3>Username</h3>
+                <!-- Displays user's username -->
+
+                <p>
+                    <span id="username"></span>
+                </p>
+
+            </div>
+
+            <div class="profile-card">
+
+                <h3>Age</h3>
+                <!-- Displays user's age -->
+
+                <p>
+                    <span id="age"></span>
+                </p>
+
+            </div>
+
+            <div class="profile-card">
+
+                <h3>Height</h3>
+                <!-- Displays user's height -->
+
+                <p>
+                    <span id="height"></span> cm
+                </p>
+
+            </div>
+
+            <div class="profile-card">
+
+                <h3>Weight</h3>
+                <!-- Displays user's weight -->
+
+                <p>
+                    <span id="weight"></span> kg
+                </p>
+
+            </div>
+
+            <div class="profile-card">
+
+                <h3>Goal</h3>
+                <!-- Displays user's fitness goal -->
+
+                <p>
+                    <span id="goal"></span>
+                </p>
+
+            </div>
+
+            <div class="profile-card">
+
+                <h3>Activity Level</h3>
+                <!-- Displays user's activity level -->
+
+                <p>
+                    <span id="activity"></span>
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+
+        // Gets user's full name from local storage
+
+        const fullName =
+            localStorage.getItem("fullName");
+
+        // Updates welcome message with user's name
+
+        document.getElementById("welcomeMessage").textContent =
+            "Welcome Back, " + (fullName || "User") + "!";
+
+        // Displays username
+
+        document.getElementById("username").textContent =
+            localStorage.getItem("username") || "";
+
+        // Displays age
+
+        document.getElementById("age").textContent =
+            localStorage.getItem("age") || "";
+
+        // Displays height
+
+        document.getElementById("height").textContent =
+            localStorage.getItem("height") || "";
+
+        // Displays weight
+
+        document.getElementById("weight").textContent =
+            localStorage.getItem("weight") || "";
+
+        // Displays fitness goal
+
+        document.getElementById("goal").textContent =
+            localStorage.getItem("goal") || "";
+
+        // Displays activity level
+
+        document.getElementById("activity").textContent =
+            localStorage.getItem("activity") || "";
+
+    </script>
+
+</body>
+
+</html>

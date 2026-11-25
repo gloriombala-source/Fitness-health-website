@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Workout</title>
+  <link rel="stylesheet" href="workoutpagestyle.css">
+</head>
+<body>
+
+  <header>
+    <a href="index.html" class="logo">LOGO</a>
+    <nav>
+      <a href="workout.html" class="current">WORKOUT</a>
+      <a href="history.html">HISTORY</a>
+      <a href="exercises.html">EXERCISES</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Start a workout.</h1>
+    <p class="subtitle">Start from scratch or pick a template.</p>
+
+    <h2 class="section-title">QUICK START</h2>
+    <a href="active.html" class="blue-btn big">Start an Empty Workout</a>
+
+    <h2 class="section-title">TEMPLATES</h2>
+    <div class="card-grid">
+
+      <div class="card template">
+        <h3>Push Day</h3>
+        <ul>
+          <li>Bench Press</li>
+          <li>Overhead Press</li>
+          <li>Incline Dumbbell Press</li>
+          <li>Tricep Pushdown</li>
+        </ul>
+        <!-- After the ? : workout name, then the exercises -->
+        <a href="active.html?Push Day,Bench Press,Overhead Press,Incline Dumbbell Press,Tricep Pushdown" class="blue-btn">Start</a>
+      </div>
+
+      <div class="card template">
+        <h3>Pull Day</h3>
+        <ul>
+          <li>Deadlift</li>
+          <li>Pull Ups</li>
+          <li>Barbell Row</li>
+          <li>Bicep Curl</li>
+        </ul>
+        <a href="active.html?Pull Day,Deadlift,Pull Ups,Barbell Row,Bicep Curl" class="blue-btn">Start</a>
+      </div>
+
+      <div class="card template">
+        <h3>Leg Day</h3>
+        <ul>
+          <li>Squat</li>
+          <li>Leg Press</li>
+          <li>Romanian Deadlift</li>
+          <li>Calf Raise</li>
+        </ul>
+        <a href="active.html?Leg Day,Squat,Leg Press,Romanian Deadlift,Calf Raise" class="blue-btn">Start</a>
+      </div>
+
+      <div class="card template">
+        <h3>Full Body</h3>
+        <ul>
+          <li>Squat</li>
+          <li>Bench Press</li>
+          <li>Barbell Row</li>
+          <li>Overhead Press</li>
+        </ul>
+        <a href="active.html?Full Body,Squat,Bench Press,Barbell Row,Overhead Press" class="blue-btn">Start</a>
+      </div>
+
+    </div>
+  </main>
+
+</body>
+</html>

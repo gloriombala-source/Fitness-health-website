@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Workout in Progress</title>
+  <link rel="stylesheet" href="workoutpagestyle.css">
+</head>
+<body>
+
+  <header>
+    <a href="index.html" class="logo">LOGO</a>
+    <nav>
+      <a href="workout.html" class="current">WORKOUT</a>
+      <a href="history.html">HISTORY</a>
+      <a href="exercises.html">EXERCISES</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Timer and Finish button stick to the top -->
+    <div class="active-top">
+      <span class="timer"></span>
+      <button class="blue-btn" onclick="finishWorkout()">Finish</button>
+    </div>
+
+    <input type="text" id="workout-name" class="name-input" value="My Workout">
+
+    <!-- Exercises get added in here -->
+    <div id="exercises">
+      <p class="empty">No exercises yet. Press "Add Exercises" to get started.</p>
+    </div>
+
+    <div id="end"></div>
+    <a href="#picker" class="light-btn full">Add Exercises</a>
+    <a href="workout.html" class="red-btn full">Cancel Workout</a>
+  </main>
+
+
+  <!-- ===== HIDDEN EXERCISE (gets copied every time you add one) ===== -->
+  <div class="exercise-block" id="exercise-template">
+    <div class="card-head">
+      <h3 class="exercise-name">Exercise</h3>
+      <button class="text-btn red" onclick="removeExercise(this)">Remove</button>
+    </div>
+    <div class="set-header">
+      <span>SET</span><span>KG</span><span>REPS</span><span>✓</span>
+    </div>
+    <div class="set-row">
+      <span class="set-num">1</span>
+      <input type="number" min="0">
+      <input type="number" min="0">
+      <label class="check"><input type="checkbox"><span>✓</span></label>
+    </div>
+    <button class="light-btn" onclick="addSet(this)">+ Add Set</button>
+  </div>
+
+
+  <!-- ===== POPUP: PICK AN EXERCISE ===== -->
+  <div id="picker" class="modal">
+    <div class="modal-box">
+      <div class="modal-top">
+        <a href="#end" class="text-btn">Close</a>
+        <a href="#new-exercise" class="text-btn">+ New Exercise</a>
+      </div>
+      <a href="#end" class="list-item" onclick="addExercise('Barbell Row')">Barbell Row<span class="part">Back</span></a>
+      <a href="#end" class="list-item" onclick="addExercise('Bench Press')">Bench Press<span class="part">Chest</span></a>
+      <a href="#end" class="list-item" onclick="addExercise('Bicep Curl')">Bicep Curl<span class="part">Arms</span></a>
+      <a href="#end" class="list-item" onclick="addExercise('Calf Raise')">Calf Raise<span class="part">Legs</span></a>
+      <a href="#end" class="list-item" onclick="addExercise('Deadlift')">Deadlift<span class="part">Back</span></a>
+      <a href="#end" class="list-item" onclick="addExercise('Incline Dumbbell Press')">Incline Dumbbell Press<span class="part">Chest</span></a>
+      <a href="#end" class="list-item" onclick="addExercise('Lat Pulldown')">Lat Pulldown<span class="part">Back</span></a>
+      <a href="#end" class="list-item" onclick="addExercise('Lateral Raise')">Lateral Raise<span class="part">Shoulders</span></a>
+      <a href="#end" class="list-item" onclick="addExercise('Leg Press')">Leg Press<span class="part">Legs</span></a>
+      <a href="#end" class="list-item" onclick="addExercise('Overhead Press')">Overhead Press<span class="part">Shoulders</span></a>
+      <a href="#end" class="list-item" onclick="addExercise('Pull Ups')">Pull Ups<span class="part">Back</span></a>
+      <a href="#end" class="list-item" onclick="addExercise('Romanian Deadlift')">Romanian Deadlift<span class="part">Legs</span></a>
+      <a href="#end" class="list-item" onclick="addExercise('Squat')">Squat<span class="part">Legs</span></a>
+      <a href="#end" class="list-item" onclick="addExercise('Tricep Pushdown')">Tricep Pushdown<span class="part">Arms</span></a>
+    </div>
+  </div>
+
+
+  <!-- ===== POPUP: MAKE A NEW EXERCISE ===== -->
+  <div id="new-exercise" class="modal">
+    <div class="modal-box">
+      <h2>New Exercise</h2>
+      <input type="text" id="new-name" placeholder="Exercise name, e.g. Cable Crossover">
+      <div class="modal-buttons">
+        <a href="#picker" class="grey-btn">Cancel</a>
+        <a href="#end" class="blue-btn" onclick="addExercise(document.getElementById('new-name').value)">Add</a>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ===== THE ONLY JAVASCRIPT ===== -->
+  <script>
+    // Remember when the workout started
+    const startTime = Date.now();
+
+    // Add an exercise by copying the hidden one
+    function addExercise(name) {
+      const block = document.getElementById("exercise-template").cloneNode(true);
+      block.removeAttribute("id");
+      block.querySelector("h3").textContent = name;
+      document.getElementById("exercises").appendChild(block);
+    }
+
+    // Remove an exercise
+    function removeExercise(button) {
+      button.closest(".exercise-block").remove();
+    }
+
+    // Add a set by copying the last set
+    function addSet(button) {
+      const sets = button.parentElement.querySelectorAll(".set-row");
+      const newSet = sets[sets.length - 1].cloneNode(true);
+      newSet.querySelector(".set-num").textContent = sets.length + 1;
+      newSet.querySelector(".check input").checked = false;
+      button.before(newSet);
+    }
+
+    // Save every ticked set to History
+    function finishWorkout() {
+      let rows = "";
+      const ticked = document.querySelectorAll("#exercises .check input:checked");
+
+      for (const box of ticked) {
+        const name = box.closest(".exercise-block").querySelector("h3").textContent;
+        const numbers = box.closest(".set-row").querySelectorAll("input[type=number]");
+        rows += "<div class='history-row'><span>" + name + "</span><span>" + numbers[0].value + " kg × " + numbers[1].value + "</span></div>";
+      }
+
+      if (rows === "") {
+        alert("Tick off at least one set first.");
+        return;
+      }
+
+      const minutes = Math.round((Date.now() - startTime) / 60000);
+      const card = "<div class='card'><h3>" + document.getElementById("workout-name").value + "</h3>"
+        + "<p class='date'>" + new Date().toDateString() + " · " + minutes + " min</p>"
+        + "<div class='history-row head'><span>Exercise</span><span>Set</span></div>"
+        + rows + "</div>";
+
+      // Put the new workout at the top of the saved history
+      localStorage.setItem("history", card + (localStorage.getItem("history") || ""));
+      location.href = "history.html";
+    }
+
+    // If you started from a template, the link has its name and exercises after the "?"
+    if (location.search !== "") {
+      const names = decodeURI(location.search.slice(1)).split(",");
+      document.getElementById("workout-name").value = names.shift();
+      for (const name of names) {
+        addExercise(name);
+      }
+    }
+  </script>
+
+</body>
+</html>

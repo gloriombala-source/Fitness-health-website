@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nutrition & Recipes</title>
+ <link rel="stylesheet" href="nutrition.css">
+</head>
+<body>
+
+  <!-- Top banner -->
+  <header id="header">
+    <div class="box">
+      <p class="lime-text">HOME / NUTRITION / RECIPES</p>
+      <h1>RECIPES</h1>
+
+      <div class="controls">
+        <select id="course-filter">
+          <option value="all">ALL COURSES</option>
+          <option value="breakfast">BREAKFAST</option>
+          <option value="lunch">LUNCH</option>
+          <option value="dinner">DINNER</option>
+          <option value="snack">SNACK</option>
+          <option value="dessert">DESSERT</option>
+        </select>
+
+        <input type="text" id="search-input" placeholder="Search recipes or ingredients...">
+        <button id="search-btn" class="btn">SEARCH</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- main recipe grid-->
+  <main id="grid-view" class="box">
+    <div id="recipe-grid" class="grid"></div>
+  </main>
+
+  <!-- single recipe but seen when clicked -->
+  <section id="detail-view" class="box hidden">
+    <button id="back-btn" class="btn">← BACK</button>
+    <p id="detail-path" class="lime-text"></p>
+    <h1 id="detail-title" class="orange-text"></h1>
+
+    <div class="top-info">
+      <img id="detail-img" src="" alt="Recipe">
+      <div class="meta">
+        <div class="tags">
+          <span id="detail-prep"></span>
+          <span id="detail-cook"></span>
+          <span id="detail-serves"></span>
+        </div>
+        <p id="detail-desc"></p>
+      </div>
+    </div>
+</div>
+    </div>
+
+    <div class="nutrition-section">
+      <h3>NUTRITIONAL INFORMATION</h3>
+      <div class="traffic-lights">
+        <div class="nutri-box">
+          <div class="nutri-top neutral"><span>Energy</span><b id="n-kj">848kJ</b><b id="n-kcal">201kcal</b></div>
+          <div class="nutri-bottom" id="n-epct">10%</div>
+        </div>
+        <div class="nutri-box">
+          <div class="nutri-top amber" id="box-fat"><span>Fat</span><b id="n-fat">4.3g</b></div>
+          <div class="nutri-bottom" id="n-fpct">6%</div>
+        </div>
+        <div class="nutri-box">
+          <div class="nutri-top amber" id="box-sat"><span>Saturates</span><b id="n-sat">2.1g</b></div>
+          <div class="nutri-bottom" id="n-spct">11%</div>
+        </div>
+        <div class="nutri-box">
+          <div class="nutri-top amber" id="box-sug"><span>Sugars</span><b id="n-sug">16g</b></div>
+          <div class="nutri-bottom" id="n-sugpct">18%</div>
+        </div>
+        <div class="nutri-box">
+          <div class="nutri-top green" id="box-salt"><span>Salt</span><b id="n-salt">0.005g</b></div>
+          <div class="nutri-bottom" id="n-saltpct">0%</div>
+        </div>
+      </div>
+    </div>
+
+      <div></div>
+
+
+    <div class="columns">
+      <div>
+        <h2>INGREDIENTS</h2>
+        <ul id="detail-ingredients"></ul>
+      </div>
+      <div>
+        <h2>METHOD</h2>
+        <ol id="detail-method"></ol>
+      </div>
+    </div>
+  </section>
+
+  <script src="nutrition.js"></script>
+</body>
+</html>

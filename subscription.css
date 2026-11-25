@@ -1,0 +1,125 @@
+/* main font */
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: Arial, sans-serif; }
+
+/* Pure black background and white text */
+body {
+  background: #000000;
+  color: #ffffff;
+  min-height: 100vh;
+  padding: 50px 20px;
+}
+
+/* main heading orange colour and writing below */
+header { text-align: center; max-width: 650px; margin: 0 auto 55px; }
+header h1 { color:  #ffffff; font-size: 2.3rem; margin-bottom: 10px; letter-spacing: 0.5px; }
+header p { color: #bbbbbb; font-size: 1rem; }
+
+/* middle part */
+.container { max-width: 1050px; margin: 0 auto; }
+
+/* the subscription boxes next to each other */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  align-items: center;
+}
+
+/* Orange colour around boxes */
+.card {
+  background: #111111;
+  border: 1px solid rgba(248, 179, 52, 0.45);
+  border-radius: 16px;
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  min-height: 440px;
+}
+
+/* middle taller box with bright orange border and glow */
+.card.featured {
+  border: 2px solid #f8b334;
+  background: #141414;
+  min-height: 485px;
+  box-shadow: 0 10px 30px rgba(248, 179, 52, 0.18);
+}
+
+/* "MOST POPULAR" sign at the top of the center card */
+.top-badge {
+  position: absolute;
+  top: -13px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #f8b334;
+  color: #000000;
+  font-size: 0.72rem;
+  font-weight: bold;
+  padding: 4px 14px;
+  border-radius: 20px;
+  letter-spacing: 0.5px;
+}
+
+/* box heading blue and frequency tag orange */
+.card-header { display: flex; justify-content: space-between; align-items: center; }
+.card-header h3 { color: #0073E6; font-size: 1.45rem; font-weight: bold; }
+.pill-tag { font-size: 0.7rem; color: #f8b334; border: 1px solid #f8b334; padding: 3px 8px; border-radius: 12px; }
+
+/* Horizontal line under each box title */
+.divider { height: 1px; background: rgba(248, 179, 52, 0.3); margin: 16px 0 22px; }
+
+/* Price display */
+.price { font-size: 2.7rem; font-weight: bold; margin-bottom: 24px; color: #ffffff; }
+.price span { font-size: 1.2rem; font-weight: normal; color: #aaaaaa; }
+
+/* checklist with green circle checkmarks */
+.card ul { list-style: none; flex: 1; margin-bottom: 25px; }
+.card ul li { margin-bottom: 13px; padding-left: 24px; position: relative; font-size: 0.92rem; color: #e0e0e0; }
+.card ul li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #000000;
+  background: #C4E538;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  font-size: 0.7rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 2px;
+}
+
+/* Button styles */
+button { padding: 12px 18px; border-radius: 8px; font-weight: bold; cursor: pointer; font-size: 0.92rem; transition: 0.2s; }
+.btn-outline { background: transparent; color: #ffffff; border: 1px solid #f8b334; }
+.btn-outline:hover { background: rgba(248, 179, 52, 0.15); color: #f8b334; }
+
+.btn-solid { background: #C4E538; color: #000000; border: none; }
+.btn-solid:hover { background: #d4f24c; }
+
+/* Bottom streak reward bar  */
+.streak-banner {
+  margin-top: 40px;
+  background: #111111;
+  border: 1px solid rgba(248, 179, 52, 0.45);
+  border-left: 4px solid #f8b334;
+  border-radius: 12px;
+  padding: 18px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+.streak-banner strong { color: #f8b334; }
+.streak-controls { display: flex; align-items: center; gap: 15px; }
+.btn-solid.small { padding: 8px 14px; font-size: 0.85rem; }
+
+/* Stacks the 3 boxesvertically on smaller screens */
+@media (max-width: 850px) {
+  .cards-grid { grid-template-columns: 1fr; }
+  .card.featured { min-height: auto; }
+} 

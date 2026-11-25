@@ -1,0 +1,423 @@
+/* Sets the overall page background, font and minimum height */
+body {
+    margin: 0;
+    background-color: #000000;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+}
+
+/* Centres the signup or login card on the page */
+.container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styles the main signup or login card */
+.card {
+    width: 520px;
+    background-color: #111111;
+    padding: 45px;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(255,107,0,0.15);
+    text-align: center;
+    color: white;
+    border: 1px solid #2b2b2b;
+}
+
+/* Hides signup steps that are not currently selected */
+.step {
+    display: none;
+}
+
+/* Makes the currently selected signup step visible */
+.active {
+    display: block;
+}
+
+/* Styles all second-level headings */
+h2 {
+    color: white;
+    margin-bottom: 20px;
+    font-size: 36px;
+    font-family: "Times New Roman", serif;
+}
+
+/* Styles text input fields and selection menus */
+input, select {
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+    border-radius: 12px;
+    border: 2px solid #333333;
+    background-color: #1a1a1a;
+    color: white;
+    box-sizing: border-box;
+    transition: 0.3s;
+}
+
+/* Changes the border colour when an input field is selected */
+input:focus, select:focus {
+    border-color: #FF6B00;
+    outline: none;
+}
+
+/* Styles the smaller descriptive text underneath headings */
+.subtitle {
+    color: #a0a0a0;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+/* Styles the main buttons on the website */
+button {
+    margin-top: 25px;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 10px;
+    background-color: #FF6B00;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Changes the button colour when the mouse hovers over it */
+button:hover {
+    background-color: #C4E538;
+    color: black;
+}
+
+/* Displays the user's progress through the signup steps */
+.progress {
+    color: #0073E6;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+/* Creates the main navigation bar at the top of the page */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 60px;
+    border-bottom: 2px solid #FF6B00;
+    box-sizing: border-box;
+    gap: 20px;
+}
+
+/* Styles the website title inside the navigation bar */
+nav h1 {
+    color: white;
+    font-size: 32px;
+    margin: 0;
+    letter-spacing: 2px;
+    font-family: "Times New Roman", serif;
+}
+
+/* Aligns the navigation links in a horizontal row */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 55px;
+    margin-left: 80px;
+}
+
+/* Styles the individual navigation links */
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: "Times New Roman", serif;
+}
+
+/* Styles the signup link in the navigation bar */
+.signup-btn {
+    background-color: #FF6B00;
+    color: white;
+    text-decoration: none;
+    padding: 15px 35px;
+    border-radius: 15px;
+    font-weight: bold;
+    font-size: 18px;
+    margin-left: auto;
+    font-family: "Times New Roman", serif;
+}
+
+/* Changes the signup link colour when hovered over */
+.signup-btn:hover {
+    background-color: #C4E538;
+    color: black;
+}
+
+/* Positions the dropdown menu relative to its button */
+.dropdown {
+    position: relative;
+}
+
+/* Styles the button that opens the dropdown menu */
+.dropbtn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    font-family: "Times New Roman", serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Positions and styles the hidden dropdown menu */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 180px;
+    background-color: #687342;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Displays each dropdown option as a separate link */
+.dropdown-content a {
+    display: block;
+    padding: 12px 15px;
+    color: white;
+    text-decoration: none;
+}
+
+/* Changes the dropdown link background when hovered over */
+.dropdown-content a:hover {
+    background-color: #869652;
+}
+
+/* Makes the dropdown menu appear when the mouse hovers over it */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Creates the main introduction section of the homepage */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    padding: 80px 0 80px 80px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Sets the width of the text area in the hero section */
+.hero-text {
+    width: 45%;
+    flex-shrink: 0;
+}
+
+/* Styles the main heading in the hero section */
+.hero-text h2 {
+    color: white;
+    font-size: 72px;
+    line-height: 1.1;
+    margin-bottom: 30px;
+    font-family: "Times New Roman", serif;
+}
+
+/* Styles the descriptive paragraph in the hero section */
+.hero-text p {
+    color: #d3d3d3;
+    font-size: 28px;
+    line-height: 1.6;
+}
+
+/* Sets the size and rounded corners of the hero image */
+.hero-image img {
+    width: 100%;
+    max-width: none;
+    display: block;
+    border-radius: 30px 0 0 30px;
+}
+
+/* Arranges the profile cards in rows with spacing between them */
+.profile-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-top: 30px;
+}
+
+/* Styles each individual profile card */
+.profile-card {
+    width: 220px;
+    background-color: #111111;
+    border: 2px solid #FF6B00;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0px 8px 20px rgba(0,0,0,0.4);
+}
+
+/* Styles the heading inside each profile card */
+.profile-card h3 {
+    margin-top: 0;
+    color: #C4E538;
+    font-family: "Times New Roman", serif;
+}
+
+/* Styles the paragraph text inside each profile card */
+.profile-card p {
+    margin-bottom: 0;
+    color: white;
+    font-size: 24px;
+}
+
+/* Arranges the contact page heading, text and image side by side */
+.contact-header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    max-width: 1400px;
+    margin: 80px auto;
+    padding: 40px;
+    gap: 40px;
+}
+
+/* Sets the contact text area width */
+.contact-text {
+    flex: 0 0 50%;
+}
+
+/* Styles the main heading on the contact page */
+.contact-text h1 {
+    color: white;
+    font-size: 72px;
+    font-family: "Times New Roman", serif;
+    margin-bottom: 30px;
+}
+
+/* Styles the descriptive paragraph on the contact page */
+.contact-text p {
+    color: #d3d3d3;
+    font-size: 24px;
+    line-height: 1.8;
+}
+
+/* Positions the contact image */
+.contact-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    min-width: 0;
+}
+
+/* Sets the contact image size and rounded corners */
+.contact-image img {
+    width: 100%;
+    max-width: 550px;
+    border-radius: 25px;
+}
+
+/* Sets the width, spacing and positioning of the contact form */
+.contact-section {
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 40px;
+}
+
+/* Centres the heading above the contact form */
+.contact-section h2 {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+/* Places contact form input fields next to each other */
+.contact-row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+/* Allows contact input fields to share the available row space */
+.contact-row input {
+    flex: 1;
+}
+
+/* Styles the larger message box in the contact form */
+textarea {
+    width: 100%;
+    height: 220px;
+    padding: 20px;
+    border-radius: 12px;
+    border: 2px solid #0073E6;
+    background-color: #1a1a1a;
+    color: white;
+    box-sizing: border-box;
+    margin-bottom: 25px;
+    resize: none;
+}
+
+/* Arranges the dashboard text and image side by side */
+.dashboard-hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 80px;
+    margin-bottom: 60px;
+}
+
+/* Allows the dashboard text area to fill available space */
+.dashboard-text {
+    flex: 1;
+    min-width: 0;
+}
+
+/* Styles the main heading on the dashboard page */
+.dashboard-text h1 {
+    font-size: 68px;
+    color: white;
+    font-family: "Times New Roman", serif;
+    margin-bottom: 20px;
+}
+
+/* Styles the descriptive text underneath the dashboard heading */
+.dashboard-text p {
+    color: #d3d3d3;
+    font-size: 24px;
+    line-height: 1.6;
+    max-width: 600px;
+}
+
+/* Centres the dashboard image within its section */
+.dashboard-image {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    justify-content: center;
+}
+
+/* Sets the dashboard image size and rounded corners */
+.dashboard-image img {
+    width: 100%;
+    max-width: 650px;
+    border-radius: 30px;
+}
+
+/* Styles the Get Started button on the landing page */
+.start-btn {
+    display: inline-block;
+    background-color: #FF6B00;
+    color: white;
+    text-decoration: none;
+    padding: 15px 35px;
+    border-radius: 15px;
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 20px;
+    font-family: "Times New Roman", serif;
+}
+
+/* Changes the button colour when hovered over */
+.start-btn:hover {
+    background-color: #C4E538;
+    color: black;
+}

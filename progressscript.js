@@ -48,7 +48,7 @@ function updateProgress2() {
     bar2.innerHTML = Math.round(percentage2) + "%";
 
     if (value2 >= target2) {
-       document.getElementById("proteinResult").textContent =
+       document.getElementById("fibreResult").textContent =
        ("Congrats! You've reached your goal for the day!");
     }
 }
@@ -104,7 +104,7 @@ function updateProgress4() {
 
     
        if (value4 >= target4) {
-             document.getElementById("proteinResult").textContent =
+             document.getElementById("fatsResult").textContent =
           ("Congrats! You've reached your goal for the day!");
     }
 }

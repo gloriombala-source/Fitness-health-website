@@ -321,6 +321,23 @@ canvas {
     width: 100px;
 }
 
+#stepsResult {
+    display: block;
+    margin-left: 12px;
+}
+
+#calResult {
+    display: block;
+    margin-left: 12px;
+}
+
+#stepsResult {
+    display: block;
+    margin-left: 12px;
+}
+
+
+
 
 
 

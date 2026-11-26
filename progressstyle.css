@@ -132,6 +132,14 @@ h3 {
     margin-left: 40px;
 }
 
+.h2-p {
+    color: white;
+    font-size: 36px;
+    font-weight: normal;
+    text-align: center;
+    
+}
+
 .h2-n{
     color: white;
     font-size: 36px;
@@ -150,27 +158,6 @@ a:hover {
     color: var(--blue);
 } 
 
-
-.table-two {
-    color: white;
-    font-size: 30px;
-    text-align: center;
-    width: 100%;
-    height: 500px;
-    border-collapse: collapse;
-    background-image: url('https://images.unsplash.com/photo-1644426358812-879f02d1d867?q=80&w=1228&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D');
-    
-
-}
-
-.h2-t{
-    color: white;
-}
-
-.img-one {
-    padding-left: 25px;
-}
-
 .progress-container {
     max-width: 80%;
     height: 30px;
@@ -178,7 +165,7 @@ a:hover {
     color: white;
     border-radius: 20px;
     text-align: left;
-}
+} /* Styles the progress bar before the input */
 
 .progress-bar {
     width: 0%;
@@ -190,7 +177,7 @@ a:hover {
     transition: width 0.5s;
     background-color: var(--green);
     max-width: 100%;
-}
+} /* Sytles the progress bar after the input */
 
 
 input {
@@ -201,26 +188,26 @@ input {
     padding: 2px 6px;
     box-sizing: border-box;
     font-size: 15px;
-    font-family: "Poppins", sans-serif;
+    font-family: "Times New Roman", serif;
     text-align: center;
     border: none;
-}
+} /* Styles the input */
 
 
 input[type="number"] {
     -moz-appearance: textfield;
     appearance: textfield;
-}
+} /* Removes spinner buttons and makes the input look like a normal text field */
 
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
-}
+} /* Removes up and down arrows and any spacing between them */
 
 #carbInput {
   width: 70px;
-}
+} /* Makes the carb input wider */
 
 #proteinResult {
     display: block;
@@ -242,6 +229,8 @@ input[type="number"]::-webkit-outer-spin-button {
     margin-left: 12px;
 }
 
+/* These result styles allow the "Congrats!... " message to appear */
+
 .div-1 {
     margin-left: 30px;
 }
@@ -249,6 +238,7 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .chart-container {
     width: 800px;
+    max-width: 80%;
     margin: 40px auto;
     padding: 20px;
     background-color: none;
@@ -256,6 +246,7 @@ input[type="number"]::-webkit-outer-spin-button {
     text-align: center;
     color: white;
 }
+/* Styles the container holding the pie chart */
 
 canvas {
     max-width: 100%;
@@ -277,6 +268,7 @@ canvas {
     padding-bottom: 40px;
     width: 80%;
     margin: 0 auto;
+    font-family: "Times New Roman", serif;
 }
 
 .inputs button {
@@ -308,9 +300,6 @@ canvas {
     border-radius: 1px;
 }
 
-#stepsInput {
-    width: 100px;
-}
 
 #work {
     width: 100%;
@@ -319,3 +308,20 @@ canvas {
 #t {
     text-align: center;
 }
+
+#stepsInput {
+    width: 100px;
+}
+
+#calInput {
+    width: 100px;
+}
+
+#waterInput {
+    width: 100px;
+}
+
+
+
+
+

@@ -61,7 +61,7 @@ function updateProgress3() {
     let input = document.getElementById("carbInput");
     let value3 = Number(input.value);
 
-    if (value3 < 0 || value3 > target3 || input.value === "") {
+    if (value3 < 0 || input.value === "") {
         alert("Enter a value between 0 and " + target3);
         return;
     }
@@ -89,7 +89,7 @@ function updateProgress4() {
     let input = document.getElementById("fatsInput");
     let value4 = Number(input.value);
 
-    if (value4 < 0 || value4 > target4 || input.value === "") {
+    if (value4 < 0 || input.value === "") {
         alert("Enter a value between 0 and " + target4);
         return;
     }
@@ -287,7 +287,7 @@ function updateProgress5() {
     let input = document.getElementById("stepsInput");
     let value1 = Number(input.value);
 
-    if (value1 < 0 || value1 > target1 || input.value === "") {
+    if (value1 < 0 || input.value === "") {
         alert("Enter a value between 0 and " + target1);
         return;
     }
@@ -316,7 +316,7 @@ function updateProgress6() {
     let input = document.getElementById("calInput");
     let value2 = Number(input.value);
 
-    if (value2 < 0 || value2 > target2 || input.value === "") {
+    if (value2 < 0 || input.value === "") {
         alert("Enter a value between 0 and " + target2);
         return;
     }
@@ -347,7 +347,7 @@ function updateProgress7() {
     let input = document.getElementById("waterInput");
     let value2 = Number(input.value);
 
-    if (value2 < 0 || value2 > target2 || input.value === "") {
+    if (value2 < 0 || input.value === "") {
         alert("Enter a value between 0 and " + target2);
         return;
     }

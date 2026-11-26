@@ -8,14 +8,63 @@
 </head>
 <body>
 
-  <header>
-    <a href="index.html" class="logo">LOGO</a>
-    <nav>
-      <a href="workout.html" class="current">WORKOUT</a>
-      <a href="history.html">HISTORY</a>
-      <a href="exercises.html">EXERCISES</a>
-    </nav>
-  </header>
+  <!-- ===== SHARED NAV (exact same on every page of the site) ===== -->
+  <nav>
+
+    <h1>FitTrack</h1>
+    <!-- Website logo -->
+
+    <div class="nav-links">
+
+      <a href="dashboard.html">Home</a>
+      <!-- Link to dashboard homepage -->
+
+      <a href="workout.html">Workouts</a>
+      <!-- Link to workouts page -->
+
+      <a href="nutrition.html">Nutrition</a>
+      <!-- Link to nutrition page -->
+
+      <a href="progress.html">Progress Tracker</a>
+      <!-- Link to progress tracker page -->
+
+      <div class="dropdown">
+        <!-- Dropdown menu -->
+
+        <button class="dropbtn">
+          More ▼
+        </button>
+
+        <div class="dropdown-content">
+
+          <a href="about.html">About Us</a>
+          <!-- Link to about page -->
+
+          <a href="subscription.html">Subscriptions</a>
+          <!-- Link to subscriptions page -->
+
+          <a href="Contact.html">Contact</a>
+          <!-- Link to contact page -->
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <a href="Landing.html" class="signup-btn">
+      Log Out
+    </a>
+    <!-- Logs user out and returns to landing page -->
+
+  </nav>
+
+  <!-- ===== WORKOUT TRACKER TABS (only on the tracker pages) ===== -->
+  <div class="tracker-nav">
+    <a href="workout.html" class="current">WORKOUT</a>
+    <a href="history.html">HISTORY</a>
+    <a href="exercises.html">EXERCISES</a>
+  </div>
 
   <main>
     <!-- Timer and Finish button stick to the top -->

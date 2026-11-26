@@ -1,18 +1,110 @@
 /* 26435292 Alexandra Nicolau */
+
+
 :root {
     --blue: #0073E6;
     --green: #C4E538;
     --orange: #FF6B00;
     --gray: #292929;
-}
+}/* Makes finding the colours easier */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 60px;
+    border-bottom: 2px solid #FF6B00;
+    box-sizing: border-box;
+    gap: 20px;
+} /* Styles the main navigation bar */
+
+nav h1 {
+    color: white;
+    font-size: 32px;
+    margin: 0;
+    letter-spacing: 2px;
+    font-family: "Times New Roman", serif;
+} /* Styles the website title inside the navigation bar */
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 55px;
+    margin-left: 80px;
+} /* Aligns the navigation links in a horizontal row */
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: "Times New Roman", serif;
+} /* Styles the individual navigation links */
+
+.signup-btn {
+    background-color: #FF6B00;
+    color: white;
+    text-decoration: none;
+    padding: 15px 35px;
+    border-radius: 15px;
+    font-weight: bold;
+    font-size: 18px;
+    margin-left: auto;
+    font-family: "Times New Roman", serif;
+} /* Styles the signup link in the navigation bar */
+
+.signup-btn:hover {
+    background-color: #C4E538;
+    color: black;
+} /* Changes the signup link colour when hovered over */
+
+.dropdown {
+    position: relative;
+} /* Positions the dropdown menu relative to its button */
+
+.dropbtn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    font-family: "Times New Roman", serif;
+    margin: 0;
+    padding: 0;
+} /* Styles the button that opens the dropdown menu */
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 180px;
+    background-color: #687342;
+    border-radius: 8px;
+    overflow: hidden;
+} /* Positions and styles the hidden dropdown menu */
+
+.dropdown-content a {
+    display: block;
+    padding: 12px 15px;
+    color: white;
+    text-decoration: none;
+} /* Displays each dropdown option as a separate link */
+
+.dropdown-content a:hover {
+    background-color: #869652;
+} /* Changes the dropdown link background when hovered over */
+
+.dropdown:hover .dropdown-content {
+    display: block;
+} /* Makes the dropdown menu appear when the mouse hovers over it */
 
 body {
     background-color: black;
-    font-family: "Poppins", sans-serif;
+     font-family: "Times New Roman", serif;
     text-align: left;
     color: white;
     margin: 0;
-}
+} /* Styles the main text body */
 
 h1 {
     color: white;
@@ -47,7 +139,7 @@ h3 {
     margin-left: 20px;
     border-left: 3px solid var(--blue);
     padding-left: 10px;
-}
+} /* Styles the h2 headings specifically for the 2 different sections */
 
 a {
     color: white;
@@ -56,31 +148,8 @@ a {
 
 a:hover {
     color: var(--blue);
-}
+} 
 
-
-.table-one {
-   font-size: 20px;
-    width: 100%;
-    margin-left: 20px;
-    border-collapse: collapse;
-    border-radius: 10px;
-    border-bottom: 2px solid var(--orange);
-    text-align: left;
-}
-
-.table-nav {
-    font-size: 20px;
-    width: auto;
-    text-align: center;
-    border-collapse: collapse;
-    margin: 20px auto;
-
-}
-
-.table-nav td {
-    padding: 0 40px;
-}
 
 .table-two {
     color: white;
